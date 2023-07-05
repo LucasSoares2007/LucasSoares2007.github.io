@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <Title>Trabalho Python</Title>
     <style>
       
@@ -16,8 +17,14 @@
 
       }
 
+      #imagemPython {
 
-      #button4 {
+        position: absolute;
+        left: 400px;
+        top: 400px;
+      }
+
+      #button1 {
         background-color: blue;
         
         border: none;
@@ -51,8 +58,32 @@
         height: 100px;
         }
 
+        #button5 {
+        background-color: rgb(41, 41, 41);
+        
+        border: none;
+        color: rgb(255, 255, 255);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20px;
+        width: 210px;
+        height: 100px;
+        }
+
+        #buttonExample {
+        background-color: rgb(41, 41, 41);
+        
+        border:none;
+        color: rgb(255, 255, 255);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20px;
+        width: 210px;
+        height: 30px;
+        top: 600px;
+        left: 300px;
+        }
+
         /* Estilos para a exibição da imagem em tela cheia */
-        #imagemEmTelaCheia4 {
+        #imagemEmTelaCheia1 {
             display: none;
             position: fixed;
             top: 0;
@@ -62,7 +93,7 @@
             background-color: rgba(0, 0, 0, 0.7); /* Fundo preto com transparência */
         }
         
-        #imagemEmTelaCheia4 img {
+        #imagemEmTelaCheia1 img {
             display: block;
             max-width: 80%;
             max-height: 80%;
@@ -104,8 +135,26 @@
             max-height: 80%;
             margin: 5% auto; /* Centraliza a imagem verticalmente e horizontalmente */
         }
+
+        #imagemEmTelaCheia5 {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Fundo preto com transparência */
+        }
+        
+        #imagemEmTelaCheia5 img {
+            display: block;
+            max-width: 80%;
+            max-height: 80%;
+            margin: 5% auto; /* Centraliza a imagem verticalmente e horizontalmente */
+        }
         
     </style>
+
 </head>
 <body background="PythonSymbol.png" topmargin="25px">
 
@@ -113,22 +162,22 @@
 
   <h2 id="subtítulos"> => Variáveis </h2>
     <!-- Botão para abrir a imagem -->
-    <button onclick="abrirImagem4()" id="button4">Clique para ver sobre</button>
+    <button onclick="abrirImagem1()" id="button1">Clique para ver sobre</button>
     
     <!-- Div para exibir a imagem em tela cheia -->
-    <div id="imagemEmTelaCheia4" onclick="fecharImagem4()">
-        <img src="Imagem trabalho 4.jpeg" alt="Imagem">
+    <div id="imagemEmTelaCheia1" onclick="fecharImagem1()">
+        <img src="Imagem trabalho 1.jpeg" alt="Imagem">
     </div>
     
     <script>
     	// Função para abrir a imagem em tela cheia
-        function abrirImagem4() {
-            var imagemEmTelaCheia = document.getElementById("imagemEmTelaCheia4");
+        function abrirImagem1() {
+            var imagemEmTelaCheia = document.getElementById("imagemEmTelaCheia1");
             var imagem = imagemEmTelaCheia.querySelector("img");
             var botaoAbrirImagem = document.querySelector("button");
             
             // Define a URL da imagem a ser exibida em tela cheia
-            imagem.src = "Imagem trabalho 4.jpeg";
+            imagem.src = "Imagem trabalho 1.jpeg";
             
             // Exibe a div com a imagem em tela cheia
             imagemEmTelaCheia.style.display = "block";
@@ -138,15 +187,15 @@
         }
         
         // Função para fechar a imagem em tela cheia
-        function fecharImagem4() {
-            var imagemEmTelaCheia = document.getElementById("imagemEmTelaCheia4");
+        function fecharImagem1() {
+            var imagemEmTelaCheia = document.getElementById("imagemEmTelaCheia1");
             var botaoAbrirImagem = document.querySelector("button");
             
             // Esconde a div com a imagem em tela cheia
             imagemEmTelaCheia.style.display = "none";
             
             // Limpa a URL da imagem para evitar que seja exibida novamente ao reabrir
-            imagemEmTelaCheia.querySelector("img").src = "Imagem trabalho 4.jpeg";
+            imagemEmTelaCheia.querySelector("img").src = "Imagem trabalho 1.jpeg";
             
             // Ativa o botão "Abrir Imagem" novamente
             botaoAbrirImagem.disabled = false;
@@ -237,6 +286,52 @@
             botaoAbrirImagem.disabled = false;
         }
     </script>
+
+<h2 id="subtítulos"> => Exemplo </h2>
+<!-- Botão para abrir a imagem -->
+<button onclick="abrirImagem5()" id="button5">Clique p/ ver o código</button>
+
+<!-- Div para exibir a imagem em tela cheia -->
+<div id="imagemEmTelaCheia5" onclick="fecharImagem5()">
+    <img src="Imagem trabalho 5.jpeg" alt="Imagem">
+</div>
+
+<script>
+    // Função para abrir a imagem em tela cheia
+    function abrirImagem5() {
+        var imagemEmTelaCheia = document.getElementById("imagemEmTelaCheia5");
+        var imagem = imagemEmTelaCheia.querySelector("img");
+        var botaoAbrirImagem = document.querySelector("button");
+        
+        // Define a URL da imagem a ser exibida em tela cheia
+        imagem.src = "Imagem trabalho 5.jpeg";
+        
+        // Exibe a div com a imagem em tela cheia
+        imagemEmTelaCheia.style.display = "block";
+        
+        // Desativa o botão "Abrir Imagem" para evitar que o usuário clique várias vezes
+        botaoAbrirImagem.disabled = true;
+    }
+    
+    // Função para fechar a imagem em tela cheia
+    function fecharImagem5() {
+        var imagemEmTelaCheia = document.getElementById("imagemEmTelaCheia5");
+        var botaoAbrirImagem = document.querySelector("button");
+        
+        // Esconde a div com a imagem em tela cheia
+        imagemEmTelaCheia.style.display = "none";
+        
+        // Limpa a URL da imagem para evitar que seja exibida novamente ao reabrir
+        imagemEmTelaCheia.querySelector("img").src = "Imagem trabalho 5.jpeg";
+        
+        // Ativa o botão "Abrir Imagem" novamente
+        botaoAbrirImagem.disabled = false;
+    }
+</script>
+
+
+
+    <a href="https://replit.com/@selokocachueira/Trabalho#main.py"><button id="buttonExample">Exemplo na Prática</button>
 
 </body>
 </html>
